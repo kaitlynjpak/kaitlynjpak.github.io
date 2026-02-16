@@ -7,9 +7,9 @@
   --muted: rgba(255,255,255,0.70);
   --faint: rgba(255,255,255,0.55);
 
-  /* quant accent — pick ONE and stick to it */
-  --accent: #31e7c6;      /* cyan-teal */
-  /* --accent: #46f28a; */ /* terminal green */
+  /* background color */
+  --accent: #ffee8c;      
+
 
   --radius: 18px;
   --shadow: 0 12px 40px rgba(0,0,0,0.45);
@@ -205,3 +205,21 @@ p{ color: var(--muted); }
 @media (max-width: 900px){
   .grid{ grid-template-columns: 1fr; }
 }
+
+.logo{
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.logo::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width: 36px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 999px;
+  opacity: 0.9;
+}
+
